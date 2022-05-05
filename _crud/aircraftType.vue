@@ -1,5 +1,5 @@
 <template>
-  
+
 </template>
 <script>
 //Component
@@ -16,7 +16,7 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qfly.entityNames.aircraftType"),
         apiRoute: 'apiRoutes.qfly.aircraftTypes',
-        //permission: 'ifly.fly',
+        permission: 'ifly.aircraftType',
         //extraFormFields: 'ifly.crud-fields.fly',
         create: {
           title: this.$tr('ifly.cms.form.newAircraftType')
@@ -24,26 +24,26 @@ export default {
         read: {
           columns: [
             {
-              name: 'id', 
-              label: this.$tr('isite.cms.form.id'), 
-              field: 'id', 
+              name: 'id',
+              label: this.$tr('isite.cms.form.id'),
+              field: 'id',
               style: 'width: 50px'},
             {
-              name: 'aircraftModel', 
-              label: this.$tr('ifly.cms.form.aircraftModel'), 
-              field: 'model', 
+              name: 'aircraftModel',
+              label: this.$tr('ifly.cms.form.aircraftModel'),
+              field: 'model',
               align: 'left'
             },
             {
-              name: 'manufacturer', 
-              label: this.$tr('icommerce.cms.form.manufacturer'), 
-              field: 'manufacturer', 
+              name: 'manufacturer',
+              label: this.$tr('icommerce.cms.form.manufacturer'),
+              field: 'manufacturer',
               align: 'left'
             },
             {
-              name: 'description', 
-              label: this.$tr('isite.cms.form.description'), 
-              field: 'description', 
+              name: 'description',
+              label: this.$tr('isite.cms.form.description'),
+              field: 'description',
               align: 'left'
             },
             {

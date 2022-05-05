@@ -14,7 +14,7 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qfly.entityNames.flight"),
         apiRoute: "apiRoutes.qfly.flight",
-        //permission: "ifly.categories",
+        permission: "ifly.flight",
         //extraFormFields: "ifly.crud-fields.categories",
         create: {
           title: this.$tr("ifly.cms.form.newflight"),
