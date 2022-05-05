@@ -14,7 +14,7 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qfly.entityNames.flightScheduleLeg"),
         apiRoute: "apiRoutes.qfly.flightScheduleLegs",
-        permission: "ifly.flightScheduleLeg",
+        permission: "iflight.flightScheduleLeg",
         //extraFormFields: "ifly.crud-fields.flightScheduleLegs",
         create: {
           title: this.$tr("ifly.cms.form.newflightScheduleLeg"),

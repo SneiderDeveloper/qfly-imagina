@@ -16,7 +16,7 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qfly.entityNames.aircraftType"),
         apiRoute: 'apiRoutes.qfly.aircraftTypes',
-        permission: 'ifly.aircraftType',
+        permission: 'iflight.aircraftType',
         //extraFormFields: 'ifly.crud-fields.fly',
         create: {
           title: this.$tr('ifly.cms.form.newAircraftType')

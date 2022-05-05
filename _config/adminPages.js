@@ -1,6 +1,6 @@
 export default {
   aircraftType: {
-    permission: 'ifly.aircraftType.manage',
+    permission: 'iflight.aircraftType.manage',
     activated: true,
     authenticated: true,
     path: '/fly/aircraftType/index',
@@ -15,7 +15,7 @@ export default {
     }
   },
   airline: {
-    permission: 'ifly.airline.manage',
+    permission: 'iflight.airline.manage',
     activated: true,
     authenticated: true,
     path: '/fly/airline/index',
@@ -30,7 +30,7 @@ export default {
     }
   },
   airport: {
-    permission: 'ifly.airport.manage',
+    permission: 'iflight.airport.manage',
     activated: true,
     authenticated: true,
     path: '/fly/airport/index',
@@ -45,7 +45,7 @@ export default {
     }
   },
   flight: {
-    permission: 'ifly.flight.manage',
+    permission: 'iflight.flight.manage',
     activated: true,
     authenticated: true,
     path: '/fly/flight/index',
@@ -60,7 +60,7 @@ export default {
     }
   },
   flightSchedule: {
-    permission: 'ifly.flightSchedule.manage',
+    permission: 'iflight.flightSchedule.manage',
     activated: true,
     authenticated: true,
     path: '/fly/flightSchedule/index',
@@ -75,7 +75,7 @@ export default {
     }
   },
   flightScheduleLeg: {
-    permission: 'ifly.flightScheduleLeg.manage',
+    permission: 'iflight.flightScheduleLeg.manage',
     activated: true,
     authenticated: true,
     path: '/fly/flightScheduleLeg/index',
