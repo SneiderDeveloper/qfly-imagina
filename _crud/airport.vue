@@ -14,7 +14,7 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qfly.entityNames.airport"),
         apiRoute: "apiRoutes.qfly.airports",
-        //permission: "ifly.airports",
+        permission: "iflight.airport",
         //extraFormFields: "ifly.crud-fields.airports",
         create: {
           title: this.$tr("ifly.cms.form.newAirport"),

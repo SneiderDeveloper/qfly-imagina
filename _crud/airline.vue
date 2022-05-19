@@ -15,7 +15,7 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qfly.entityNames.airline"),
         apiRoute: 'apiRoutes.qfly.airlines',
-        //permission: 'ifly.airline',
+        permission: 'iflight.airline',
         //extraFormFields: 'ifly.crud-fields.airline',
         create: {
           title: this.$tr('ifly.cms.form.newAirline')
@@ -23,33 +23,33 @@ export default {
         read: {
           columns: [
             {
-              name: 'id', 
-              label: this.$tr('isite.cms.form.id'), 
-              field: 'id', 
+              name: 'id',
+              label: this.$tr('isite.cms.form.id'),
+              field: 'id',
               style: 'width: 50px'
             },
             {
-              name: 'airlineName', 
-              label: this.$tr('ifly.cms.form.airlineName'), 
-              field: 'airlineName', 
+              name: 'airlineName',
+              label: this.$tr('ifly.cms.form.airlineName'),
+              field: 'airlineName',
               align: 'left',
             },
             {
-              name: 'airlineShortName', 
-              label: this.$tr('ifly.cms.form.airlineShortName'), 
-              field: 'airlineShortName', 
+              name: 'airlineShortName',
+              label: this.$tr('ifly.cms.form.airlineShortName'),
+              field: 'airlineShortName',
               align: 'left',
             },
             {
-              name: 'airlineIataCode', 
-              label: this.$tr('ifly.cms.form.airlineIataCode'), 
-              field: 'airlineIataCode', 
+              name: 'airlineIataCode',
+              label: this.$tr('ifly.cms.form.airlineIataCode'),
+              field: 'airlineIATACode',
               align: 'left',
             },
             {
-              name: 'airlineIcaoCode', 
-              label: this.$tr('ifly.cms.form.airlineIcaoCode'), 
-              field: 'airlineIcaoCode', 
+              name: 'airlineIcaoCode',
+              label: this.$tr('ifly.cms.form.airlineIcaoCode'),
+              field: 'airlineICAOCode',
               align: 'left',
             },
             {
@@ -69,10 +69,10 @@ export default {
             {name: 'actions', label: this.$tr('isite.cms.form.actions'), align: 'left'},
           ],
           filters: {
-            
+
           },
           requestParams: {
-            
+
           },
         },
         update: {

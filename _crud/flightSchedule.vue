@@ -12,10 +12,10 @@ export default {
     crudData() {
       return {
         crudId: this.crudId,
-        entityName: config('main.qfly.entityNames.flightSchedule'),
-        apiRoute: 'apiRoutes.qfly.flightSchedules',
-       // permission: 'ifly.flightSchdules',
-       // extraFormFields: 'ifly.crud-fields.flightSchdules',
+        entityName: config("main.qfly.entityNames.flightSchedule"),
+        apiRoute: "apiRoutes.qfly.flightSchedules",
+        permission: "iflight.flightSchedule",
+       // extraFormFields: "ifly.crud-fields.flightSchdules",
         create: {
           title: this.$tr('ifly.cms.form.newflightSchedule'),
         },
@@ -45,7 +45,7 @@ export default {
               field: 'flightNumberIcao',
               align: 'left',
             },
-            
+
             {
               name: 'aircraftType',
               label: this.$tr('ifly.cms.sidebar.aircraftType'),
