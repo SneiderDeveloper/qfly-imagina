@@ -43,13 +43,13 @@ export default {
             {
               name: 'airlineIataCode', 
               label: this.$tr('ifly.cms.form.airlineIataCode'), 
-              field: 'airlineIATACode', 
+              field: 'airlineIataCode', 
               align: 'left',
             },
             {
               name: 'airlineIcaoCode', 
               label: this.$tr('ifly.cms.form.airlineIcaoCode'), 
-              field: 'airlineICAOCode', 
+              field: 'airlineIcaoCode', 
               align: 'left',
             },
             {
@@ -98,7 +98,7 @@ export default {
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
           },
-          airlineIATACode: {
+          airlineIataCode: {
             value: "",
             type: "input",
             props: {
@@ -106,7 +106,7 @@ export default {
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
           },
-          airlineICAOCode: {
+          airlineIcaoCode: {
             value: "",
             type: "input",
             props: {
