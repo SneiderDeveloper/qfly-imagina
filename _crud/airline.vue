@@ -98,7 +98,7 @@ export default {
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
           },
-          airlineIATACode: {
+          airlineIataCode: {
             value: "",
             type: "input",
             props: {
@@ -106,7 +106,7 @@ export default {
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
           },
-          airlineICAOCode: {
+          airlineIcaoCode: {
             value: "",
             type: "input",
             props: {

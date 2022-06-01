@@ -2,7 +2,6 @@ const moduleName = 'flight';
 const moduleVersion = 'v1';
 const urlBase = `/${moduleName}/${moduleVersion}`
 
-
 export default {
   urlBase : urlBase,
   version: moduleVersion,
@@ -12,4 +11,5 @@ export default {
   flightSchedules: `${urlBase}/flight-schedules`,
   flightScheduleLegs: `${urlBase}/flight-schedule-legs`,
   flight: `${urlBase}/flights`,
+  flightaware: `${urlBase}/flights/flightaware/search`,
 }

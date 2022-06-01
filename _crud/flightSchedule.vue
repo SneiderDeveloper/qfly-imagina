@@ -17,115 +17,116 @@ export default {
         permission: "iflight.flightSchedule",
        // extraFormFields: "ifly.crud-fields.flightSchdules",
         create: {
-          title: this.$tr("ifly.cms.form.newflightSchedule"),
+          title: this.$tr('ifly.cms.form.newflightSchedule'),
         },
         read: {
           columns: [
             {
-              name: "id",
-              label: this.$tr("isite.cms.form.id"),
-              field: "id",
-              style: "width: 50px",
+              name: 'id',
+              label: this.$tr('isite.cms.form.id'),
+              field: 'id',
+              style: 'width: 50px',
             },
             {
-              name: "flightNumber",
-              label: this.$tr("ifly.cms.form.flightNumber"),
-              field: "flightNumber",
-              align: "rigth",
+              name: 'flightNumber',
+              label: this.$tr('ifly.cms.form.flightNumber'),
+              field: 'flightNumber',
+              align: 'rigth',
             },
             {
-              name: "flightNumberIATA",
-              label: this.$tr("ifly.cms.form.flightNumberIATA"),
-              field: "flightNumberIata",
-              align: "left",
+              name: 'flightNumberIATA',
+              label: this.$tr('ifly.cms.form.flightNumberIATA'),
+              field: 'flightNumberIata',
+              align: 'left',
             },
             {
-              name: "flightNumberICAO",
-              label: this.$tr("ifly.cms.form.flightNumberICAO"),
-              field: "flightNumberIcao",
-              align: "left",
+              name: 'flightNumberICAO',
+              label: this.$tr('ifly.cms.form.flightNumberICAO'),
+              field: 'flightNumberIcao',
+              align: 'left',
             },
 
             {
-              name: "aircraftType",
-              label: this.$tr("ifly.cms.sidebar.aircraftType"),
-              field: "aircraftTypeId",
-              align: "left",
+              name: 'aircraftType',
+              label: this.$tr('ifly.cms.sidebar.aircraftType'),
+              field: 'aircraftTypeId',
+              align: 'left',
             },
             {
-              name: "airline",
-              label: this.$tr("ifly.cms.sidebar.airline"),
-              field: "airlineId",
-              align: "left",
+              name: 'airline',
+              label: this.$tr('ifly.cms.sidebar.airline'),
+              field: 'airlineId',
+              align: 'left',
             },
             {
-              name: "activeFlight",
-              label: this.$tr("ifly.cms.form.activeFlight"),
-              field: "isActive",
-              align: "left",
+              name: 'activeFlight',
+              label: this.$tr('ifly.cms.form.activeFlight'),
+              field: 'isActive',
+              align: 'left',
             },
             {
-              name: "flightType",
-              label: this.$tr("ifly.cms.form.flightType"),
-              field: "flightType",
-              align: "left",
+              name: 'flightType',
+              label: this.$tr('ifly.cms.form.flightType'),
+              field: 'flightType',
+              align: 'left',
             },
             {
-              name: "flightScheduleLegs",
-              label: this.$trp("ifly.cms.sidebar.flightScheduleLeg"),
-              field: "relation",
-              align: "left",
+              name: 'flightScheduleLegs',
+              label: this.$trp('ifly.cms.sidebar.flightScheduleLeg'),
+              field: 'relation',
+              align: 'left',
             },
             {
-              name: "created_at",
-              label: this.$tr("isite.cms.form.createdAt"),
-              field: "createdAt",
-              align: "left",
-              format: (val) => (val ? this.$trd(val) : "-")
+              name: 'created_at',
+              label: this.$tr('isite.cms.form.createdAt'),
+              field: 'createdAt',
+              align: 'left',
+              format: (val) => (val ? this.$trd(val) : '-')
             },
             {
-              name: "updated_at",
-              label: this.$tr("isite.cms.form.updatedAt"),
-              field: "updatedAt",
-              align: "left",
-              format: (val) => (val ? this.$trd(val) : "-")
+              name: 'updated_at',
+              label: this.$tr('isite.cms.form.updatedAt'),
+              field: 'updatedAt',
+              align: 'left',
+              format: (val) => (val ? this.$trd(val) : '-')
             },
             {
-              name: "actions",
-              label: this.$tr("isite.cms.form.actions"),
-              align: "left",
+              name: 'actions',
+              label: this.$tr('isite.cms.form.actions'),
+              align: 'left',
             },
           ],
+          requestParams: {include: 'aircraftType,airline'}
         },
         update: {
-          title: this.$trp("ifly.cms.sidebar.flightSchedule"),
+          title: this.$trp('ifly.cms.sidebar.flightSchedule'),
         },
         delete: true,
         formLeft: {
-          id: {value: ""},
+          id: {value: ''},
           userId: {value: this.$store.state.quserAuth.userId},
           flightNumber: {
-            value: "",
-            type: "input",
+            value: '',
+            type: 'input',
             props: {
-              label: `${this.$tr("ifly.cms.form.flightNumber")}*`,
-              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
+              label: `${this.$tr('ifly.cms.form.flightNumber')}*`,
+              rules: [(val) => !!val || this.$tr('isite.cms.message.fieldRequired')],
             },
           },
           flightNumberIata: {
-            value: "",
-            type: "input",
+            value: '',
+            type: 'input',
             props: {
-              label: `${this.$tr("ifly.cms.form.flightNumberIATA")}*`,
-              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
+              label: `${this.$tr('ifly.cms.form.flightNumberIATA')}*`,
+              rules: [(val) => !!val || this.$tr('isite.cms.message.fieldRequired')],
             },
           },
           flightNumberIcao: {
-            value: "",
-            type: "input",
+            value: '',
+            type: 'input',
             props: {
-              label: `${this.$tr("ifly.cms.form.flightNumberICAO")}*`,
-              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
+              label: `${this.$tr('ifly.cms.form.flightNumberICAO')}*`,
+              rules: [(val) => !!val || this.$tr('isite.cms.message.fieldRequired')],
             },
           },
           aircraftTypeId: {
@@ -133,9 +134,14 @@ export default {
             type: 'treeSelect',
             props: {
               label: this.$tr('ifly.cms.sidebar.aircraftType'),
+
             },
             loadOptions: {
               apiRoute: 'apiRoutes.qfly.aircraftTypes',
+              select: {
+                label:'model',
+                id: 'id'
+              },
               refresh: true,
             }
           },
@@ -147,6 +153,10 @@ export default {
             },
             loadOptions: {
               apiRoute: 'apiRoutes.qfly.airlines',
+              select: {
+                label:'airlineName',
+                id: 'id'
+              },
               refresh: true,
             }
           },
@@ -160,11 +170,11 @@ export default {
             }
           },
           schedule: {
-            value: "",
-            type: "input",
+            value: '',
+            type: 'input',
             props: {
-              label: `${this.$tr("isite.cms.form.schedule")}*`,
-              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
+              label: `${this.$tr('isite.cms.form.schedule')}*`,
+              rules: [(val) => !!val || this.$tr('isite.cms.message.fieldRequired')],
             },
           },
           flightType: {

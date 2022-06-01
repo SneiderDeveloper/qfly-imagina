@@ -85,7 +85,7 @@ export default {
             type: "input",
             props: {
               label: `${this.$tr("ifly.cms.form.airportName")}*`,
-              rules: [(val) => !!val || this.$tr("ifly.cms.message.fieldRequired")],
+              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
           },
           airportIataCode: {
@@ -93,7 +93,10 @@ export default {
             type: "input",
             props: {
               label: `${this.$tr("ifly.cms.form.airportIataCode")}*`,
-              rules: [(val) => !!val || this.$tr("ifly.cms.message.fieldRequired")],
+              rules: [
+                (val) => !!val || this.$tr("isite.cms.message.fieldRequired"),
+                (val) => val.length >= 8 || this.$tr('isite.cms.message.fieldMinLeng', {num: 8})
+              ],
             },
           },
           airportIcaoCode: {
@@ -101,16 +104,22 @@ export default {
             type: "input",
             props: {
               label: `${this.$tr("ifly.cms.form.airportIcaoCode")}*`,
-              rules: [(val) => !!val || this.$tr("ifly.cms.message.fieldRequired")],
+              rules: [
+                (val) => !!val || this.$tr("isite.cms.message.fieldRequired"),
+                (val) => val.length >= 8 || this.$tr('isite.cms.message.fieldMinLeng', {num: 8})
+              ],
             },
           },
           timezone: {
-            value: "",
-            type: "fullDate",
+            value: '-4',
+            type: 'treeSelect',
             props: {
-              label: `${this.$tr("ifly.cms.form.timezone")}*`,
-              rules: [(val) => !!val || this.$tr("ifly.cms.message.fieldRequired")],
+              label: this.$tr('ifly.cms.form.timezone'),
             },
+            loadOptions: {
+              apiRoute: 'apiRoutes.qfly.flightSchedules',
+              refresh: true,
+            }
           },
         }
       }

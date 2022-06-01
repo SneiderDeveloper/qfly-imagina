@@ -126,7 +126,7 @@ export default {
         },
         delete: true,
         formLeft: {
-          id: {value: ""},
+          id: {value: null},
           userId: {value: this.$store.state.quserAuth.userId},
           relation: {
             value: null,
@@ -240,19 +240,35 @@ export default {
           },
           airportOriginId : {
             value: "",
-            type: "input",
+            type: "select",
             props: {
               label: `${this.$tr("ifly.cms.form.airportOriginId")}*`,
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
+            loadOptions: {
+              apiRoute: 'apiRoutes.qfly.airports',
+              select: {
+                label:'airportName',
+                id: 'id'
+              },
+              refresh: true,
+            }
           },
           airportDestinationId : {
             value: "",
-            type: "input",
+            type: "select",
             props: {
               label: `${this.$tr("ifly.cms.form.airportDestinationId")}*`,
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
+            loadOptions: {
+              apiRoute: 'apiRoutes.qfly.airports',
+              select: {
+                label:'airportName',
+                id: 'id'
+              },
+              refresh: true,
+            }
           },
         },
       }
