@@ -111,14 +111,19 @@ export default {
             },
           },
           timezone: {
-            value: '-4',
-            type: 'treeSelect',
+            value: '',
+            type: "select",
             props: {
               label: this.$tr('ifly.cms.form.timezone'),
+              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
             loadOptions: {
-              apiRoute: 'apiRoutes.qfly.flightSchedules',
-              refresh: true,
+              apiRoute: 'apiRoutes.qfly.timezones',
+              select: {
+                label:'name',
+                id: 'id'
+              },
+              requestParams: {refresh: true}
             }
           },
         }

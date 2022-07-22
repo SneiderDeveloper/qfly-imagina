@@ -1,6 +1,9 @@
 const moduleName = 'flight';
+const setupModuleName = 'setup';
 const moduleVersion = 'v1';
 const urlBase = `/${moduleName}/${moduleVersion}`
+const setupUrlBase = `/${setupModuleName}/${moduleVersion}`
+
 
 export default {
   urlBase : urlBase,
@@ -12,4 +15,5 @@ export default {
   flightScheduleLegs: `${urlBase}/flight-schedule-legs`,
   flight: `${urlBase}/flights`,
   flightaware: `${urlBase}/flights/flightaware/search`,
+  timezones: `${setupUrlBase}/timezones`,
 }
