@@ -121,7 +121,7 @@ export default {
               apiRoute: 'apiRoutes.qfly.timezones',
               select: {
                 label:'name',
-                id: 'id'
+                id: 'value'
               },
               requestParams: {refresh: true}
             }
