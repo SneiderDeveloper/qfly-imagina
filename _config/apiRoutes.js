@@ -15,5 +15,6 @@ export default {
   flightScheduleLegs: `${urlBase}/flight-schedule-legs`,
   flight: `${urlBase}/flights`,
   flightaware: `${urlBase}/flights/flightaware/search`,
+  flightawareMap: `${urlBase}/flights/flightaware/map`,
   timezones: `${setupUrlBase}/timezones`,
 }
