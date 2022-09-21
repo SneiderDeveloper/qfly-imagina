@@ -4,7 +4,7 @@ const pages = config('pages') // Get Pages from config
 export default [
   {
     title: 'ifly.cms.sidebar.flightInfo',
-    icon: 'fas fa-plane',
+    icon: 'fa-light fa-plane',
     children: [
       pages.qfly.aircraftType,
       pages.qfly.airline,

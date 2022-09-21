@@ -24,7 +24,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ifly.cms.sidebar.airline',
-    icon: 'fas fa-luggage-cart',
+    icon: 'fal fa-luggage-cart',
     subHeader: {
       refresh: true,
     }
@@ -39,7 +39,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ifly.cms.sidebar.airport',
-    icon: 'fas fa-city',
+    icon: 'fal fa-city',
     subHeader: {
       refresh: true,
     }
@@ -54,7 +54,7 @@ export default {
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ifly.cms.sidebar.flight',
-    icon: 'fas fa-plane-departure',
+    icon: 'fal fa-plane-departure',
     subHeader: {
       refresh: true,
     }
