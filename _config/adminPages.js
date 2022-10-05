@@ -88,6 +88,21 @@ export default {
     subHeader: {
       refresh: true,
     }
+  },
+  flightStatuses: {
+    permission: 'iflight.flight-statuses.manage',
+    activated: true,
+    authenticated: true,
+    path: '/fly/flight-statuses/index',
+    name: 'qfly.admin.flightStatus',
+    crud: import('../_crud/flightStatus'),
+    page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
+    layout: () => import('@imagina/qsite/_layouts/master.vue'),
+    title: 'ifly.cms.sidebar.flightStatuses',
+    icon: 'fas fa-braille',
+    subHeader: {
+      refresh: true,
+    }
   }
 }
 

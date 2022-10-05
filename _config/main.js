@@ -7,6 +7,7 @@ export default {
     flightSchedule: 'flightSchedule',
     flightScheduleLeg: 'flightScheduleLeg',
     airlport: 'airlport',
-    flight: 'flights'
+    flight: 'flights',
+    flightStatuses: 'flightStatuses'
   },
 }
