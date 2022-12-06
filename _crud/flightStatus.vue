@@ -32,16 +32,16 @@ export default {
               name: 'name',
               label: 'Status Name',
               field: 'name',
-              align: 'left'
+              align: 'left',
+              formatColumn: row => ({
+                bgTextColor: row.color ? row.color : ''
+              }),
             },
             {
               name: 'color',
               label: 'Status Color',
               field: 'color',
               align: 'left',
-              formatColumn: row => ({
-                bgTextColor: row.color ? row.color : ''
-              }),
             },
             {
               name: "created_at",
