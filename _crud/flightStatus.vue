@@ -2,6 +2,7 @@
 
 </template>
 <script>
+import colorQuasar from '@imagina/qsite/_resources/models/colorQuasar.js'
 //Component
 export default {
   data() {
@@ -81,10 +82,12 @@ export default {
           },
           color : {
             value: "",
-            type: "input",
+            type: "select",
             props: {
+              selectColor: true,
               label: 'Status Color',
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
+              options: colorQuasar,
             },
           },
         }
