@@ -38,7 +38,10 @@ export default {
               name: 'color',
               label: 'Status Color',
               field: 'color',
-              align: 'left'
+              align: 'left',
+              formatColumn: row => ({
+                bgTextColor: row.color ? row.color : ''
+              }),
             },
             {
               name: "created_at",
