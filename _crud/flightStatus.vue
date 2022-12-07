@@ -35,7 +35,7 @@ export default {
               field: 'name',
               align: 'left',
               formatColumn: row => ({
-                bgTextColor: row.color ? row.color : ''
+                bgTextColor: row.color ? `bg-${row.color}` : ''
               }),
             },
             {
