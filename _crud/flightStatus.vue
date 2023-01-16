@@ -2,7 +2,7 @@
 
 </template>
 <script>
-import colorQuasar from '@imagina/qsite/_resources/models/colorQuasar.js'
+import colorTailwind from '@imagina/qsite/_resources/models/colorTailwind.js'
 //Component
 export default {
   data() {
@@ -35,7 +35,7 @@ export default {
               field: 'name',
               align: 'left',
               formatColumn: row => ({
-                bgTextColor: row.color ? `bg-${row.color}` : ''
+                bgTextColor: row.color ? `tw-bg-${row.color}` : ''
               }),
             },
             {
@@ -85,9 +85,10 @@ export default {
             type: "select",
             props: {
               selectColor: true,
+              colorType: 'tailwindcss',             
               label: 'Status Color',
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
-              options: colorQuasar,
+              options: colorTailwind,
             },
           },
         }
