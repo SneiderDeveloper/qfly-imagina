@@ -52,13 +52,6 @@ export default {
               }),
             },
             {
-              name: 'Carrier',
-              label: 'Carrier',
-              field: 'carrier',
-              align: 'left',
-              format: item => item ? item.name  : "",
-            },
-            {
               name: 'airlineIataCode',
               label: this.$tr('ifly.cms.form.airlineIataCode'),
               field: 'airlineIATACode',
@@ -89,9 +82,7 @@ export default {
           filters: {
 
           },
-          requestParams: {
-            include: 'carrier',
-          },
+          requestParams: {},
         },
         update: {
           title: this.$tr('ifly.cms.form.updateAircraftType')
