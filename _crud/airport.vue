@@ -95,7 +95,6 @@ export default {
               label: `${this.$tr("ifly.cms.form.airportIataCode")}*`,
               rules: [
                 (val) => !!val || this.$tr("isite.cms.message.fieldRequired"),
-                (val) => val.length >= 8 || this.$tr('isite.cms.message.fieldMinLeng', {num: 8})
               ],
             },
           },
@@ -106,7 +105,6 @@ export default {
               label: `${this.$tr("ifly.cms.form.airportIcaoCode")}*`,
               rules: [
                 (val) => !!val || this.$tr("isite.cms.message.fieldRequired"),
-                (val) => val.length >= 8 || this.$tr('isite.cms.message.fieldMinLeng', {num: 8})
               ],
             },
           },
