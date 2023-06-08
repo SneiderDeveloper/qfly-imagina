@@ -54,13 +54,13 @@ export default {
             {
               name: 'airlineIataCode',
               label: this.$tr('ifly.cms.form.airlineIataCode'),
-              field: 'airlineIATACode',
+              field: 'airlineIataCode',
               align: 'left',
             },
             {
               name: 'airlineIcaoCode',
               label: this.$tr('ifly.cms.form.airlineIcaoCode'),
-              field: 'airlineICAOCode',
+              field: 'airlineIcaoCode',
               align: 'left',
             },
             {
