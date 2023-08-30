@@ -45,6 +45,12 @@ export default {
               align: 'left',
             },
             {
+              name: 'icon',
+              label: 'Status icon',
+              field: 'icon',
+              align: 'left',
+            },
+            {
               name: "created_at",
               label: this.$tr("isite.cms.form.createdAt"),
               field: "createdAt",
@@ -89,6 +95,14 @@ export default {
               label: 'Status Color',
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
               options: colorTailwind,
+            },
+          },
+          icon: {
+            value: "",
+            type: "input",
+            props: {
+              label: 'Icon',
+              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
           },
         }
