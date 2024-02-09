@@ -1,6 +1,6 @@
 export default {
   aircraftType: {
-    permission: 'iflight.aircraftType.manage',
+    permission: 'iflight.aircrafttype.manage',
     activated: true,
     authenticated: true,
     path: '/fly/aircraftType/index',
@@ -53,7 +53,7 @@ export default {
     crud: import('../_crud/flight'),
     page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
-    title: 'ifly.cms.sidebar.flight',
+    title: 'ifly.cms.sidebar.flightInfo',
     icon: 'fal fa-plane-departure',
     subHeader: {
       refresh: true,
@@ -100,6 +100,36 @@ export default {
     layout: () => import('@imagina/qsite/_layouts/master.vue'),
     title: 'ifly.cms.sidebar.flightStatuses',
     icon: 'fas fa-braille',
+    subHeader: {
+      refresh: true,
+    }
+  },
+  searchflight: {
+    //permission: 'iflight.flight-statuses.manage',
+    activated: true,
+    authenticated: true,
+    path: '/fly/search-flight/index',
+    name: 'qfly.admin.searchFlight',
+    crud: import('../components/searchFlights/components/index.vue'),
+    page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
+    layout: () => import('@imagina/qsite/_layouts/master.vue'),
+    title: 'ifly.cms.sidebar.flightsTracker',
+    icon: 'fa-thin fa-magnifying-glass-location',
+    subHeader: {
+      refresh: true,
+    }
+  },
+  map: {
+    //permission: 'iflight.flight-statuses.manage',
+    activated: true,
+    authenticated: true,
+    path: '/fly/map',
+    name: 'qfly.admin.map',
+    crud: import('../components/flightMap/components/flightMap.vue'),
+    page: () => import('@imagina/qcrud/_pages/admin/crudPage'),
+    layout: () => import('@imagina/qsite/_layouts/master.vue'),
+    title: 'Map',
+    icon: 'fa-solid fa-map',
     subHeader: {
       refresh: true,
     }

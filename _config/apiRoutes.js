@@ -16,6 +16,7 @@ export default {
   flight: `${urlBase}/flights`,
   flightaware: `${urlBase}/flights/flightaware/search`,
   flightawareMap: `${urlBase}/flights/flightaware/map`,
+  flightsFlightawareMap: `${urlBase}/flights/flightaware/{id}/map`,
   timezones: `${setupUrlBase}/timezones`,
   flightStatuses: `${urlBase}/flight-statuses`,
 }

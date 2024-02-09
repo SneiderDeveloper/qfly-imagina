@@ -1,0 +1,30 @@
+export interface FlightFlifo {
+    aircrafttype: string;
+    baggage_claim: string;
+    dest: string;
+    estimated_in: string;
+    estimated_off: string;
+    estimated_on: string;
+    estimated_out: string;
+    ete: string;
+    facility_hash: string;
+    facility_name: string;
+    filed_airspeed: string;
+    filed_alt: string;
+    filed_ete: string;
+    id: string;
+    ident: string;
+    orig: string;
+    pitr: string;
+    reg: string;
+    route: string;
+    scheduled_arrival_gate: string;
+    scheduled_arrival_terminal: string;
+    scheduled_in: string;
+    scheduled_off: string;
+    scheduled_on: string;
+    scheduled_out: string;
+    status: string;
+    type: string;
+    waypoints: { lat: number; lon: number }[];
+}

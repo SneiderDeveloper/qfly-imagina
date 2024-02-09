@@ -13,6 +13,8 @@ export default [
       pages.qfly.flightSchedule,
       pages.qfly.flightScheduleLeg,
       pages.qfly.flightStatuses,
+      //pages.qfly.map,
     ]
   },
+  pages.qfly.searchflight,
 ]

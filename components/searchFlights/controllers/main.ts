@@ -1,0 +1,49 @@
+import { computed, getCurrentInstance, onMounted, onBeforeUnmount } from 'vue';
+import { getFlightaware } from '../services/getFligth';
+import store from '../store/searchFlights'
+import { Flightaware, MainController, Search } from '../models/interfaces';
+import { SEARCH_FIELDS } from '../models/defaultModels/constants';
+import { routePush } from '../helpers/routePush';
+
+export default function mainController(props: any): MainController {
+    const proxy = (getCurrentInstance() as { proxy: Vue }).proxy as Vue;
+    const upcomingFlights = computed<Flightaware[]>(() => store.flightList.filter(item => item.status.includes('Scheduled')))
+    const routeFlight = computed<Flightaware[]>(() => store.flightList.filter(item => item.status.includes('Route')))
+    const pastFlights = computed<Flightaware[]>(() => store.flightList.filter(item => !item.status.includes('Scheduled') && !item.status.includes('Route')))
+    const flightList = computed<Flightaware[]>(() => store.flightList);
+    const flight = computed<Flightaware | null>(() => store.selectedFligth);
+    const loading = computed<boolean>(() => store.loading);
+    const fields = computed<Search>(() => ({ ...SEARCH_FIELDS }))
+    const validateFaFlightId = computed(() => {
+        if( (flight.value as any).workOrder && props.workOrderData && props.workOrderData.faFlightId) {
+            return (flight.value as any).workOrder.faFlightId == props.workOrderData.faFlightId
+        }
+        return false;
+    });
+    const methods = {
+        getFlightaware,
+        redirectWo: () => { routePush(proxy, flight.value) },
+    }
+    onMounted(async () => {
+        if(!props.isSearch) {
+            const flightNumber = props.workOrderData.flightNumber;
+            store.search = flightNumber;
+            await getFlightaware(props.workOrderData);
+        }
+    });
+    onBeforeUnmount(() => {
+        store.reset();
+    })
+    return {
+        fields,
+        methods,
+        store,
+        upcomingFlights,
+        routeFlight,
+        pastFlights,
+        flight,
+        loading,
+        flightList,
+        validateFaFlightId
+    }
+}

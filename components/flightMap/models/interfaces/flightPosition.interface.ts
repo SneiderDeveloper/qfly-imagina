@@ -1,0 +1,36 @@
+export interface FlightPosition {
+    adsb_version: string;
+    air_ground: string;
+    aircrafttype: string;
+    alt: string;
+    altChange: string;
+    alt_gnss: string;
+    clock: string;
+    dest: string;
+    facility_hash: string;
+    facility_name: string;
+    gs: string;
+    heading: string;
+    hexid: string;
+    id: string;
+    ident: string;
+    lat: string;
+    lon: string;
+    nac_p: number;
+    nac_v: number;
+    nav_altitude: string;
+    nav_heading: string;
+    nav_qnh: string;
+    nic: number;
+    nic_baro: number;
+    orig: string;
+    pitr: string;
+    pos_rc: number;
+    reg: string;
+    sil: number;
+    sil_type: string;
+    squawk: string;
+    type: string;
+    updateType: string;
+    vertRate: string;
+}

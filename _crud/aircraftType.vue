@@ -16,7 +16,7 @@ export default {
         crudId: this.crudId,
         entityName: config("main.qfly.entityNames.aircraftType"),
         apiRoute: 'apiRoutes.qfly.aircraftTypes',
-        permission: 'iflight.aircraftType',
+        permission: 'iflight.aircrafttype',
         //extraFormFields: 'ifly.crud-fields.fly',
         create: {
           title: this.$tr('ifly.cms.form.newAircraftType')
@@ -74,12 +74,19 @@ export default {
         delete: true,
         formLeft: {
           id: {value: ""},
-          userId: {value: this.$store.state.quserAuth.userId},
           model: {
             value: "",
             type: "input",
             props: {
               label: `${this.$tr("ifly.cms.form.aircraftModel")}*`,
+              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
+            },
+          },
+          fullName: {
+            value: "",
+            type: "input",
+            props: {
+              label: `Full name*`,
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
             },
           },
@@ -101,6 +108,14 @@ export default {
               debounce: 1500
             },
           },
+          type: {
+            value: "",
+            type: "input",
+            props: {
+              label: `Type*`,
+              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
+            },
+          }
         }
       }
     },
