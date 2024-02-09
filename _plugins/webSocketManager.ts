@@ -1,4 +1,3 @@
-import Vue from 'vue'
 import { useMapStore } from '../components/flightMap/store/useMapStore'
 
 class WebSocketManager {
@@ -6,7 +5,7 @@ class WebSocketManager {
     private isConnected: boolean = false;
 
     connect(routeWS: string) {
-        const userToken = Vue.prototype.$hook.store.state.quserAuth.userToken;
+        const userToken = null//[ptc]Vue.prototype.$hook.store.state.quserAuth.userToken;
 
         if (!userToken) {
             console.error('User token is undefined.');
