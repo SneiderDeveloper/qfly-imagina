@@ -2,7 +2,7 @@
 </template>
 <script>
 //Components
-import colorTailwind from '@imagina/qsite/_resources/models/colorTailwind.js'
+import colorTailwind from 'modules/qsite/_resources/models/colorTailwind.js'
 
 export default {
   data() {
