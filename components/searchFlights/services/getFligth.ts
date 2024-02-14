@@ -1,7 +1,6 @@
 import baseService from 'modules/qcrud/_services/baseService.js'
 import searchFlightsStore from '../store/searchFlights';
-import alert from 'modules/qsite/_plugins/alert.js'
-import moment from 'moment';
+import { alert } from 'src/plugins/utils'
 
 export async function getFlightaware(workOrder: any = null): Promise<void> {
     try {
