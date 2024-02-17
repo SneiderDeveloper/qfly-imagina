@@ -56,7 +56,7 @@ export const flightMapController = (props: any) => {
     const completedFlights = new Set()
     const activeFlights = new Map()
     const webSocketManager = new WebSocketManager()
-    const apiKey = store.getters['qsiteApp/getSettingValueByName']('isite::api-maps')
+    const apiKey = store.getSetting('isite::api-maps')
     const flightPositionList = ref<FlightPosition[]>([])
     const flightFlifoList = ref<FlightFlifo[]>([])
     const flightPositionData = ref<FlightDetail>(flightDetailModel)
