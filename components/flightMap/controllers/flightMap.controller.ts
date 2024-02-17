@@ -40,7 +40,7 @@ import {
 import { flightDetailModel } from '../models/defaultModels/flightDetailModel'
 import { getFlights } from '../services/getFlightPosition.service'
 import { getMapScreenshot } from '../services/getMapScreenshot.service'
-import { globalStore } from 'src/plugins/utils'
+import { store } from 'src/plugins/utils'
 
 export const flightMapController = (props: any) => {
     const mapRef = ref<Element | null>(null)
@@ -56,7 +56,7 @@ export const flightMapController = (props: any) => {
     const completedFlights = new Set()
     const activeFlights = new Map()
     const webSocketManager = new WebSocketManager()
-    const apiKey = globalStore.store.getters['qsiteApp/getSettingValueByName']('isite::api-maps')
+    const apiKey = store.getters['qsiteApp/getSettingValueByName']('isite::api-maps')
     const flightPositionList = ref<FlightPosition[]>([])
     const flightFlifoList = ref<FlightFlifo[]>([])
     const flightPositionData = ref<FlightDetail>(flightDetailModel)
