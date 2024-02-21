@@ -1,5 +1,5 @@
 <script lang="ts">
-import { defineComponent, computed } from 'vue';
+import { defineComponent } from 'vue';
 import flightDetailController from '../controllers/flightDetail'
 import flightMap from '../../flightMap/components/flightMap.vue'
 
