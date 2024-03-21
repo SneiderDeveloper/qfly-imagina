@@ -81,6 +81,8 @@ export const flightMapController = (props: any) => {
         if (map) return
 
         try {
+            const { Map } = await google.maps.importLibrary("maps");
+
             const loader = new Loader({
                 apiKey: apiKey,
                 version: "weekly",
@@ -88,7 +90,7 @@ export const flightMapController = (props: any) => {
 
             await loader.load().then(() => {
                 if (mapRef.value) {
-                    map = new google.maps.Map(mapRef.value, {
+                    map = new Map(mapRef.value, {
                         ...MAP_ATTRIBUTES,
                         mapTypeId: google.maps.MapTypeId.TERRAIN,
                     })
@@ -141,7 +143,7 @@ export const flightMapController = (props: any) => {
         }
     }
 
-    const paintMarker = (
+    const paintMarker = async (
         rotation:number = 0,
         coordinates: (number | null)[],
         contentPopover?: string | null | undefined,
@@ -175,7 +177,7 @@ export const flightMapController = (props: any) => {
                     lat: Number(coordinates[0]),
                     lng: Number(coordinates[1]),
                 },
-                map: map,
+                map,
                 icon: url ? iconUrl : icon,
                 label: label ? labelProperties : '',
                 zIndex: url ? 1 : 2,
