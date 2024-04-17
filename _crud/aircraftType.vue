@@ -32,13 +32,15 @@ export default {
               name: 'aircraftModel',
               label: this.$tr('ifly.cms.form.aircraftModel'),
               field: 'model',
-              align: 'left'
+              align: 'left',
+              action: 'edit'
             },
             {
               name: 'manufacturer',
               label: this.$tr('icommerce.cms.form.manufacturer'),
               field: 'manufacturer',
-              align: 'left'
+              align: 'left',
+              action: 'edit'
             },
             {
               name: 'description',
