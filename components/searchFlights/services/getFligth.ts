@@ -63,8 +63,9 @@ function setSelectedFligth(workOrder, response) {
         searchFlightsStore.selectedFligth = route || null;
     } else {
         searchFlightsStore.selectedFligth = response.data.find(item => {
-            if (item.workOrder && item.workOrder.faFlightId) {
-                return item.workOrder.faFlightId == workOrder.faFlightId;
+            const faFlightId = item.workOrder && workOrder.type === 'inbound' ? item.workOrder.faFlightId : item.workOrder?.outboundFaFlightId;
+            if (item.workOrder && faFlightId) {
+                return faFlightId == workOrder.faFlightId;
             }
             return item.status.includes('Route');
         }) || (response.data.length > 1 ? response.data[1] : null) || response.data[0];
