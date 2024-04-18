@@ -44,21 +44,6 @@ export default {
       refresh: true,
     }
   },
-  flight: {
-    permission: 'iflight.flight.manage',
-    activated: true,
-    authenticated: true,
-    path: '/fly/flight/index',
-    name: 'qfly.admin.flight',
-    crud: import('../_crud/flight'),
-    page: () => import('modules/qcrud/_pages/admin/crudPage'),
-    layout: () => import('layouts/master.vue'),
-    title: 'ifly.cms.sidebar.flightInfo',
-    icon: 'fal fa-plane-departure',
-    subHeader: {
-      refresh: true,
-    }
-  },
   flightSchedule: {
     permission: 'iflight.flightSchedule.manage',
     activated: true,

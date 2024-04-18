@@ -35,12 +35,14 @@ export default {
               label: this.$tr('ifly.cms.form.airlineName'),
               field: 'airlineName',
               align: 'left',
+              action: 'edit'
             },
             {
               name: 'airlineShortName',
               label: this.$tr('ifly.cms.form.airlineShortName'),
               field: 'airlineShortName',
               align: 'left',
+              action: 'edit'
             },
             {
               name: 'color',

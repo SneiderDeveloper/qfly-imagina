@@ -9,7 +9,6 @@ export default [
       pages.qfly.aircraftType,
       pages.qfly.airline,
       pages.qfly.airport,
-      pages.qfly.flight,
       pages.qfly.flightSchedule,
       pages.qfly.flightScheduleLeg,
       pages.qfly.flightStatuses,
