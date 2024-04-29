@@ -45,15 +45,6 @@ export default {
               action: 'edit'
             },
             {
-              name: 'color',
-              label: 'Color',
-              field: 'color',
-              align: 'left',
-              formatColumn: row => ({
-                bgTextColor: row.color ? `tw-bg-${row.color}` : ''
-              }),
-            },
-            {
               name: 'airlineIataCode',
               label: this.$tr('ifly.cms.form.airlineIataCode'),
               field: 'airlineIataCode',
@@ -123,17 +114,6 @@ export default {
             props: {
               label: `${this.$tr('ifly.cms.form.airlineIcaoCode')}*`,
               rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
-            },
-          },
-          color : {
-            value: "",
-            type: "select",
-            props: {
-              selectColor: true,
-              colorType: 'tailwindcss',
-              label: 'Font Color',
-              rules: [(val) => !!val || this.$tr("isite.cms.message.fieldRequired")],
-              options: colorTailwind,
             },
           },
         }
