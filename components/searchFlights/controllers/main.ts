@@ -15,8 +15,12 @@ export default function mainController(props: any): MainController {
     const loading = computed<boolean>(() => store.loading);
     const fields = computed<Search>(() => ({ ...SEARCH_FIELDS }))
     const validateFaFlightId = computed(() => {
-        if( (flight.value as any).workOrder && props.workOrderData && props.workOrderData.faFlightId) {
-            return (flight.value as any).workOrder.faFlightId == props.workOrderData.faFlightId
+        const workOrder = (flight.value as any).workOrder;
+        const faFlightId = workOrder && props.workOrderData.type === 'inbound' 
+        ? workOrder?.faFlightId 
+        : workOrder?.outboundFaFlightId;
+        if( workOrder && props.workOrderData && props.workOrderData.faFlightId) {
+            return faFlightId == props.workOrderData.faFlightId
         }
         return false;
     });
